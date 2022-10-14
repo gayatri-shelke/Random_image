@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Card, Container, Row, Col } from "react-bootstrap";
@@ -12,9 +10,9 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       const apiRoot =await axios ("https://api.giphy.com/v1/gifs/trending?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9");
-      // console.log(apiRoot);
+      console.log(apiRoot);
       const randomIndex = Math.floor(Math.random()*50);
-      // console.log(randomIndex);
+      console.log(randomIndex);
       setImage(`${apiRoot.data.data[randomIndex].images.fixed_height.url}`);
     };
     fetchData();
